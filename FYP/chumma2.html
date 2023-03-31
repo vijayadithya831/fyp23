@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+    <style>
+      #map {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Prediction in progress...! Wait for results</h1>
+    <button><a href="{{url_for('predict')}}"></a>Predict</button>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"  crossorigin=""></script>
+    <script>
+      // Define the map object
+  var map = L.map('map').setView([0, 0], 2);
+  
+  // Add the tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
+  
+
+// Creating a custom icon
+  // Define the coordinates array
+  var coordinates = [[51.513, -0.09]];  
+  // Add the markers to the map
+  coordinates.forEach(function(coord) {
+    var marker = L.circle(coord);
+    marker.addTo(map);
+  });
+    </script>
+  </body>
+</html>

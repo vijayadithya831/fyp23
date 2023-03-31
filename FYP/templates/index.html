@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Live Cyclone Data</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      *{
+        text-align: center;
+      }
+      body{
+        background-image: url('map.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5
+      }
+      .table{
+        background-color: rgb(94, 228, 255);
+      }
+      h1{
+        background-color: rgb(94, 228, 255);
+      }
+      .btn1{
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 100%;
+            background-color: rgb(21, 97, 188);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn1:hover{
+            background: white;
+            border: 1px solid;
+            color: rgb(21, 97, 188);
+        }
+        .btn2{
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 10%;
+            background-color: rgb(21, 97, 188);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn2:hover{
+            background: white;
+            border: 1px solid;
+            color: rgb(21, 97, 188);
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+          align-items: center;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Live Cyclone Path Predictor - TyphoonTrack</h1>
+     <div class="container">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Cyclone Title</th>
+      <th scope="col">Latitude(Start)</th>
+      <th scope="col">Longtitude(Start)</th>
+      <th scope="col">Maximum Wind</th>
+      <th scope="col">Prediction</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+    <td scope="col">Tropical Cyclone Freddy</td>
+      <td scope="col">118.6</td>
+      <td scope="col">-12.2</td>
+      <td scope="col">null</td>
+      <td scope="col"><button type="button" class="btn1">Load</button></td>
+</table>
+<a href="/templates/predict.html"><button type="button" class="btn2">Predict</button></a>
+</div>
+        <script src="/static/script.js" async defer></script>
+    </body>
+</html>
